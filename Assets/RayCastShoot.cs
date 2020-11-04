@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RayCastShootComplete : MonoBehaviour {
+public class RayCastShoot : MonoBehaviour {
 
 	public int gunDamage = 1;											// Set the number of hitpoints that this gun will take away from shot objects with a health script
 	public float fireRate = 0.25f;										// Number in seconds which controls how often the player can fire
@@ -14,12 +14,13 @@ public class RayCastShootComplete : MonoBehaviour {
 	//private AudioSource gunAudio;										// Reference to the audio source which will play our shooting sound effect
 	private LineRenderer laserLine;										// Reference to the LineRenderer component which will display our laserline
 	private float nextFire;												// Float to store the time the player will be allowed to fire again, after firing
-
+	private GameObject enemy;
 
 	void Start () 
 	{
 		// Get and store a reference to our LineRenderer component
 		laserLine = GetComponent<LineRenderer>();
+		enemy = GameObject.FindGameObjectWithTag("Enemy");
 
 		// Get and store a reference to our AudioSource component
 		//gunAudio = GetComponent<AudioSource>();
@@ -58,7 +59,7 @@ public class RayCastShootComplete : MonoBehaviour {
 				// If there was a health script attached
 				//if (health != null)
 				//{
-					// Call the damage function of that script, passing in our gunDamage variable
+				// Call the damage function of that script, passing in our gunDamage variable
 				//	health.Damage (gunDamage);
 				//}
 
@@ -67,6 +68,10 @@ public class RayCastShootComplete : MonoBehaviour {
 				{
 					// Add force to the rigidbody we hit, in the direction from which it was hit
 					hit.rigidbody.AddForce (-hit.normal * hitForce);
+				}
+				if (hit.collider.tag == "Enemy"){
+					enemy.GetComponent<EnemyHealth>().TakeDamage(gunDamage*5);
+					StartCoroutine(enemy.GetComponentInChildren<EnemyColorChanger>().ChangeColor());
 				}
 			}
 			else

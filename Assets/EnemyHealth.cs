@@ -1,24 +1,27 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
-    public Slider HealthBar;
-    public float Health = 100f;
+    public Slider enemyHealthBar;
+    public float health = 100f;
 
     private float _currentHealth;
     private Interface inter;
 
     void Start (){
-        inter = GameObject.FindObjectOfType<Interface>();
-        HealthBar = inter.HealthBar;
-        _currentHealth = Health;
+        _currentHealth = health;
     }
 
+    void Update(){
+        if (_currentHealth <= 0){
+            Destroy(gameObject);
+        }
+    }
     public void TakeDamage(float damage)
     {
         _currentHealth -= damage;
-        HealthBar.value = _currentHealth;
+        enemyHealthBar.value = _currentHealth;
     }
 
     public void Recover(float healthPoints)
@@ -26,6 +29,6 @@ public class PlayerHealth : MonoBehaviour
         if (_currentHealth + healthPoints <= 100){
             _currentHealth += healthPoints;
         }
-        HealthBar.value = _currentHealth;
+        enemyHealthBar.value = _currentHealth;
     }
 }

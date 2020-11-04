@@ -22,7 +22,7 @@ public class EnemyAttack : MonoBehaviour{
             _player.GetComponent<PlayerHealth>().TakeDamage(10);
             // receive damage
 
-            print("Collision with enemy!");
+            //Debug.Log("Collision with enemy!");
 
         }
     }
