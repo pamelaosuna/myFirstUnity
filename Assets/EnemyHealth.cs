@@ -7,15 +7,18 @@ public class EnemyHealth : MonoBehaviour
     public float health = 100f;
 
     private float _currentHealth;
-    private Interface inter;
+    private GameObject inter;
 
     void Start (){
         _currentHealth = health;
+        inter = GameObject.Find("Interface");
     }
 
     void Update(){
         if (_currentHealth <= 0){
+            inter.transform.GetChild(2).gameObject.SetActive(true);
             Destroy(gameObject);
+
         }
     }
     public void TakeDamage(float damage)

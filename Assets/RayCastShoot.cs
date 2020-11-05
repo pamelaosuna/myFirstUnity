@@ -70,8 +70,8 @@ public class RayCastShoot : MonoBehaviour {
 					hit.rigidbody.AddForce (-hit.normal * hitForce);
 				}
 				if (hit.collider.tag == "Enemy"){
-					enemy.GetComponent<EnemyHealth>().TakeDamage(gunDamage*5);
 					StartCoroutine(enemy.GetComponentInChildren<EnemyColorChanger>().ChangeColor());
+					enemy.GetComponent<EnemyHealth>().TakeDamage(gunDamage*5);
 				}
 			}
 			else

@@ -5,9 +5,9 @@ using UnityEngine;
 public class RocketLauncher : MonoBehaviour
 {
 
-    [SerializeField] private Transform targetEnemy;
+    public Transform targetEnemy;
     [SerializeField] private float force;
-    [SerializeField] private float rotationForce;
+    public float rotationForce;
     [SerializeField] private float secondsBeforeHoming;
     private bool shouldFollow;
     private Rigidbody rb;

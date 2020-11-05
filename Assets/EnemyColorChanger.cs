@@ -13,8 +13,10 @@
     }
 
     void Start(){
-        Rend = GetComponent<Renderer>();
-        Rend.enabled = true;
+        if (gameObject!= null){
+            Rend = GetComponent<Renderer>();
+            Rend.enabled = true;
+        }
     }
 
     //void OnCollisionEnter(Collision collisionInfo){
@@ -29,10 +31,14 @@
     //}
 
     public IEnumerator ChangeColor(){
-        Material mat = Rend.sharedMaterial;
-        Rend.sharedMaterial = materials[1];
-        yield return new WaitForSeconds(2);//2 seconds for exxample
-        Rend.sharedMaterial = materials[0];
+        if (enemy!=null){
+            Material mat = Rend.sharedMaterial;
+            Rend.sharedMaterial = materials[1];
+            yield return new WaitForSeconds(2);//2 seconds for exxample
+            if (enemy!= null){
+               Rend.sharedMaterial = materials[0];
+            }
+        }
     }
  
  }

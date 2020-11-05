@@ -12,7 +12,7 @@
     void OnCollisionEnter(Collision collisionInfo){
         if(collisionInfo.collider.tag == "MagicPotion"){
             Debug.Log("Collided with magic potion!");
-            _player.GetComponent<ColorChanger>().enabled = true;
+            //_player.GetComponent<ColorChanger>().enabled = true;
             StartCoroutine(TurnInvincible());
         }
     }

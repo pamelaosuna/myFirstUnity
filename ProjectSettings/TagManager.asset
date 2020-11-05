@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - weapon
   - MagicPotion
+  - congrats
   layers:
   - Default
   - TransparentFX

@@ -1174,7 +1174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetEnemy: {fileID: 235152587}
   force: 50
-  rotationForce: 300
+  rotationForce: 0
   secondsBeforeHoming: 3
   launchForce: 20
 --- !u!1 &799788638
@@ -1758,6 +1758,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1103700665}
+  x: 52.85
+  y: 0.7
+  z: 0
 --- !u!1001 &1334433384
 PrefabInstance:
   m_ObjectHideFlags: 0
