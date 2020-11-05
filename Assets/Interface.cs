@@ -8,6 +8,7 @@ public class Interface : MonoBehaviour{
     public Slider HealthBar;
     public GameObject quitQuestion;
     private bool isActive = false;
+    public Slider enemyHB;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,10 @@ public class Interface : MonoBehaviour{
     public void BackToGame(){
         isActive = false;
         quitQuestion.SetActive(false);
+    }
+
+    public Slider getEHB(){
+        return enemyHB;
     }
 
 

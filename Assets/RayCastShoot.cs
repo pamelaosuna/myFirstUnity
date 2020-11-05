@@ -27,7 +27,7 @@ public class RayCastShoot : MonoBehaviour {
 	}
 	
 
-	void Update () 
+	void FixedUpdate () 
 	{
 		// Check if the player has pressed the fire button and if enough time has elapsed since they last fired
 		if (Input.GetButtonDown("Fire1") && Time.time > nextFire) 
@@ -70,7 +70,10 @@ public class RayCastShoot : MonoBehaviour {
 					hit.rigidbody.AddForce (-hit.normal * hitForce);
 				}
 				if (hit.collider.tag == "Enemy"){
+					Debug.Log("enemy: " + enemy.name);
+					//Debug.Log("hit collider: " + hit.collider.gameObject.name);
 					StartCoroutine(enemy.GetComponentInChildren<EnemyColorChanger>().ChangeColor());
+					//Debug.Log("component: ", enemy.GetComponent<EnemyHealth>());
 					enemy.GetComponent<EnemyHealth>().TakeDamage(gunDamage*5);
 				}
 			}

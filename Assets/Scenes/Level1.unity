@@ -1166,12 +1166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorCont: {fileID: 1409468549}
   button: {fileID: 1575794349}
---- !u!1 &1617823697 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 473370784, guid: 99b42c5ad5b2b4cc0b77b94549abb929,
-    type: 3}
-  m_PrefabInstance: {fileID: 3809621218758714304}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2034936140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,39 +1393,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 473370784, guid: 99b42c5ad5b2b4cc0b77b94549abb929, type: 3}
-      propertyPath: m_TagString
-      value: congrats
-      objectReference: {fileID: 0}
-    - target: {fileID: 473370784, guid: 99b42c5ad5b2b4cc0b77b94549abb929, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 473370785, guid: 99b42c5ad5b2b4cc0b77b94549abb929, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 473370786, guid: 99b42c5ad5b2b4cc0b77b94549abb929, type: 3}
-      propertyPath: m_FontData.m_FontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 473370786, guid: 99b42c5ad5b2b4cc0b77b94549abb929, type: 3}
-      propertyPath: m_Color.r
-      value: 0.9528302
-      objectReference: {fileID: 0}
-    - target: {fileID: 473370786, guid: 99b42c5ad5b2b4cc0b77b94549abb929, type: 3}
-      propertyPath: m_Color.g
-      value: 0.91237986
-      objectReference: {fileID: 0}
-    - target: {fileID: 473370786, guid: 99b42c5ad5b2b4cc0b77b94549abb929, type: 3}
-      propertyPath: m_Color.b
-      value: 0.91237986
-      objectReference: {fileID: 0}
-    - target: {fileID: 2055187911190368693, guid: 99b42c5ad5b2b4cc0b77b94549abb929,
-        type: 3}
-      propertyPath: congratsQuestion
-      value: 
-      objectReference: {fileID: 1617823697}
     - target: {fileID: 3809621217345938629, guid: 99b42c5ad5b2b4cc0b77b94549abb929,
         type: 3}
       propertyPath: m_AnchorMax.x

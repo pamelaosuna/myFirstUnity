@@ -4,7 +4,7 @@ Game features
 Le joueur est une sphère qui peut se déplacer vers le haut (en appuyant sur W), vers le bas (en appuyant sur S), vers la droite (en appuyant sur D), vers la gauche (en appuyant sur A), et sauter (en appuyant sur espace).
 Il a une barre de vie qui se conserve tout au long des niveaux.
 
-Le caméra suit le jour tout au long du jou et il est possible d'utiliser la souris pour s'approcher ou s'éloiger de la perspective donnée.
+Le caméra suit le jour tout au long du jou et il est possible d'utiliser la molette de défilement de la souris pour s'approcher ou s'éloiger de la perspective donnée.
 
 On peut sortir du jeu à tout moment en appuyant sur Escape et puis en cliquant _Yes_, sinon on peut revenir au jeu en cliquant sur _No_ ou en rappuyant sur Escape.
 

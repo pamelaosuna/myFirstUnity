@@ -11,6 +11,7 @@ TagManager:
   - weapon
   - MagicPotion
   - congrats
+  - ehb
   layers:
   - Default
   - TransparentFX
