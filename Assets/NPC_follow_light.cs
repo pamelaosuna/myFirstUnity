@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class NPC_follow : MonoBehaviour{
+public class NPC_follow_light: MonoBehaviour{
     //Transform that NPC has to follow
     public Transform transformToFollow;
     //NavMesh Agent variable
     NavMeshAgent agent;
+    
+    public bool lightIsOn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +21,10 @@ public class NPC_follow : MonoBehaviour{
     // Update is called once per frame
     void Update()
     {
-        //Follow the player
-        agent.destination = transformToFollow.position;
+        if (lightIsOn){
+            //Follow the player
+            agent.destination = transformToFollow.position;
+        }
     }
 
 

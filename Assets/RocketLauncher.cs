@@ -6,12 +6,11 @@ public class RocketLauncher : MonoBehaviour
 {
 
     public Transform targetEnemy;
-    [SerializeField] private float force;
+    public float force;
     public float rotationForce;
-    [SerializeField] private float secondsBeforeHoming;
+    public float launchForce;
     private bool shouldFollow;
     private Rigidbody rb;
-    [SerializeField] private float launchForce;
     // Start is called before the first frame update
     private void Start()
     {

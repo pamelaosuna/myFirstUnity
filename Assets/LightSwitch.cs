@@ -12,17 +12,17 @@ public class LightSwitch : MonoBehaviour
         if (player.tag == "Player" && !on){
             light.SetActive(true);
             on = true;
-            //if (enemy!=null){
-            //    enemy.GetComponent<NPC_follow>.SetActive(true);
-            //}
+            if (enemy!=null){
+                enemy.GetComponent<NPC_follow_light>().lightIsOn = true;
+            }
             Debug.Log("Supposed to turn light on");
         }
         else if (player.tag == "Player" && on){
             light.SetActive(false);
             on = false;
-            //if (enemy!=null){
-            //    enemy.GetComponent<NPC_follow>.SetActive(false);
-            //}
+            if (enemy!=null){
+                enemy.GetComponent<NPC_follow_light>().lightIsOn = false;
+            }
         }
     }
 }
